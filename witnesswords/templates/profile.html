@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+<body>
+    <header class="navbar-dash">
+        <div class="logo">
+            <a href="{% url 'dashboard' %}"><h1>WitnessWords</h1></a>
+        </div>
+
+        <div class="profile">
+            <p>Support</p>
+            <a href="{% url 'upload' %}"><button class="upload" style="background-color: red; margin-right: 20px;">Upload</button></a> 
+            <a href="{% url 'logout_client' %}"><button class="logout">Logout</button></a> 
+        </div>
+    </header>
+    <hr>
+    <div class="content">
+        <div class="col-1">
+            <h4>My profile</h4>
+            <h4>Billing info</h4>
+            <h4>Notifications</h4>
+        </div>
+
+        <div class="col-2">
+
+            <div class="info">
+                <h1>My Profile</h1>
+                <p>Firstname: {{ user.first_name }}</p> 
+                <p>Lastname: {{ user.last_name }}</p> 
+                <p>Username: {{ user.username }}</p>
+                <p>Email: {{ user.email }}</p>
+                <a href="{% url 'edit_profile' %}"><button>Edit</button></a>
+            </div>
+
+        </div>
+            
+                
+    </div>
+
+</body>
+
+</html>

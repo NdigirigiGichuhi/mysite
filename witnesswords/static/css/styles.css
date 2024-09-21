@@ -1,0 +1,628 @@
+body {
+  font-family: 'Roboto', sans-serif; /* For body text */
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif; /* For headings */
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* nav bar */ 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  overflow-x: auto;
+}
+.nav-1 {
+  margin-right: 40px;
+}
+
+.nav-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.center ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.center ul li {
+  margin: 0 15px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem; /* 16px in rem */
+}
+
+.center ul li:hover {
+  text-decoration: underline;
+}
+
+.end ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.end ul li {
+  margin-left: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem; /* 16px in rem */
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+.login {
+  background-color: #555;
+}
+
+.login:hover {
+  background-color: #444;
+}
+
+/* landing page */
+.row-1 {
+  display: flex;
+  flex-wrap: wrap; /* Makes the layout responsive */
+  align-items: center;
+  margin: 20px 0;
+  background-color: #E6E8E6;
+}
+
+.col-1, .col-2 {
+  flex: 1; /* Both columns will take equal space */
+  padding: 20px;
+}
+
+.col-1 h1 {
+  font-size: 3.125rem; /* 50px in rem */
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.col-1 p {
+  font-size: 1.125rem; /* 18px in rem */
+  line-height: 1.6;
+  color: #555;
+}
+
+.landing-photo {
+  width: 100%;
+  height: auto; /* Ensures the image resizes properly */
+  object-fit: cover; /* Ensures the image scales properly while maintaining aspect ratio */
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row-1 {
+    flex-direction: column; /* Stacks columns vertically on smaller screens */
+    text-align: center; /* Center-aligns text */
+  }
+
+  .col-1 h1 {
+    font-size: 2rem; /* Scales down the heading on smaller screens */
+  }
+
+  .col-1 p {
+    font-size: 1rem; /* Scales down the paragraph text */
+  }
+
+  .col-2 {
+    margin-top: 20px;
+  }
+
+  .landing-photo {
+    max-width: 100%;
+  }
+}
+
+.call-to-action {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Aligns items vertically */
+  gap: 20px; /* Space between the button and the text */
+  margin: 20px 0;
+}
+
+.call-to-action .order {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.125rem; /* 18px in rem */
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.call-to-action .order:hover {
+  background-color: #d32f2f;
+}
+
+.call-to-action p {
+  font-size: 1.25rem; /* 20px in rem */
+  font-weight: bolder;
+  color: #555;
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.call-to-action p:hover {
+  color: #f44336;
+}
+
+
+header.messages ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+
+/* Client form */
+
+.client-form {
+  max-width: 600px; /* Sets the maximum width of the form container */
+  margin: 0 auto; /* Centers the form horizontally */
+  padding: 20px; /* Adds padding inside the form */
+  background-color: #E6E8E6; /* Light background color for the form */
+  border: 1px solid #ddd; /* Light border around the form */
+  border-radius: 8px; /* Rounded corners for the form */
+}
+
+.client-form p.field {
+  font-weight: bold; /* Bold font for labels */
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+
+.client-form input[type="text"],
+.client-form input[type="email"],
+.client-form input[type="password"] {
+    width: 100%; /* Full width of the parent container */
+    max-width: 400px; /* Maximum width of the input fields */
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 15px; /* Space below input fields */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+    box-sizing: border-box; /* Includes padding and border in the width */
+}
+
+.register {
+  background-color: #007bff; /* Blue background for the submit button */
+  color: white; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 4px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size of the button text */
+}
+
+.register:hover {
+  color: black;
+  background-color: #3E92CC;
+}
+
+
+
+
+/* dashboard styling */
+
+.navbar-dash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  
+
+}
+
+.profile p {
+  margin-right: 20px;
+  font-size: 16px;
+  color: #333;
+  
+}
+
+
+.profile a {
+  text-decoration: none;
+}
+
+.profile button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.upload {
+  background-color: #d9534f; /* Red */
+  margin-right: 20%;
+}
+
+
+.upload:hover {
+  background-color: #c9302c;
+}
+
+.logout {
+  background-color: #6c757d; /* Gray */
+}
+
+.logout:hover {
+  background-color: #5a6268;
+}
+
+.content {
+  display: flex;
+  min-height: 100vh;
+  margin-right: 20px;
+}
+
+.content .col-1 {
+  background-color: #DFE0E2;
+  max-width: 20%;
+  padding: 20px;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.content .col-1 h4 {
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.content .col-1 h4:hover {
+  color: #007bff;
+}
+
+.content .col-2 {
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.content .col-2 h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #333;
+}
+
+.content .col-2 p {
+  font-size: 22px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.file {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.titles, .file-seg ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 4 columns: equal width */
+  gap: 10px; /* Optional: Add space between columns */
+}
+
+.titles p {
+  font-weight: bold;
+  
+}
+
+.upload {
+  margin-right: 15px;
+}
+
+
+
+
+.col-2 .file-seg .filename ul {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+
+
+ul {
+  list-style: none;
+}
+
+.filename ul li, 
+.status ul li,
+.created ul li,
+.duration ul li,
+.rush ul li {
+  margin-bottom: 15px;
+}
+
+
+.file-seg ul li:hover {
+  background-color: #D9D9D9;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.pagination .current {
+  font-weight: bold;
+}
+
+
+
+
+/* Edit profile page */
+
+/* General Styles */
+h1, h4 {
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 10px 0;
+}
+
+/* Navbar Styles */
+.navbar-dash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar-dash .logo h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.navbar-dash .profile {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-dash .profile p {
+  margin-right: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.profile button.upload {
+  background-color: #d9534f;
+}
+
+.profile button.upload:hover {
+  background-color: #c9302c;
+}
+
+.profile button.logout {
+  background-color: #6c757d;
+}
+
+.profile button.logout:hover {
+  background-color: #5a6268;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  min-height: calc(100vh - 60px); /* Adjust height to account for the navbar */
+}
+
+.content .col-1 {
+  background-color: #DFE0E2;
+  width: 20%;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .col-1 h4 {
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.content .col-1 h4:hover {
+  color: #007bff;
+}
+
+/* Profile Content */
+.content .col-2 {
+  width: 80%;
+  padding: 40px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.content .col-2 .info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content .col-2 .info h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content .col-2 .info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.content .col-2 .info a button {
+  background-color: #007bff;
+  margin-top: 20px;
+}
+
+.content .col-2 .info a button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* upload page */
+/* General Styles */
+
+
+
+
+
+.client-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input[type="file"],
+select {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input[type="file"]:focus,
+select:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.errors {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+

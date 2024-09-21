@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}WitnessWords Transcription{% endblock title %}
+
+{% block content %}
+    <div class="client-form">
+        <form action="{% url 'login_client' %}" method="post" class="">
+            {% csrf_token %}
+            <p>{{ form.username.label }}</p>
+            <p>{{ form.username }}</p>
+            <p>{{ form.password.label }}</p>
+            <p>{{ form.password }}</p>
+            <button type="submit" class="register">Login</button>
+        </form>
+    </div>
+    
+{% endblock content %}

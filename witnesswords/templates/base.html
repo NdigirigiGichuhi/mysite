@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'css/styles.css' %}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+    
+<body>
+    
+
+    <div class="navbar">
+        <div class="nav-1">
+
+            {% if user.is_authenticated %}
+                <img src="{% static 'assets/img/logo5.png' %}" alt="" class="logo" style="height: 70px; width: 80px;">
+            {% else %}
+                <a href="{% url 'home' %}"><img src="{% static 'assets/img/logo5.png' %}" alt="" class="logo" style="height: 70px; width: 80px;"></a>
+            {% endif %}
+  
+        </div>
+
+        <div class="nav-2">
+            <div class="center">
+                <ul class="pages">
+                    <li>Pricing</li>
+                    <li>Services</li>
+                    <li>Blog</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+    
+            <div class="end">
+                <ul>
+                    <li>Request a demo</li>
+                    
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'logout_client' %}"><button class="login">Logout</button></a></li>
+                    {% else %}
+                        <li><a href="{% url 'login_client' %}"><button class="login">Login</button></a></li>
+                    {% endif %}
+                    
+                    
+
+                    <li><a href="{% url 'create_client' %}"><button class="signup">Get Started</button></a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <header class="messages">
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <ul>
+                        <li>{{ message }}</li>
+                    </ul>
+                    <a href="" class="close">x</a>
+                {% endfor %}
+            </ul>
+            
+        {% endif %}
+    </header>
+
+    {% block content %}{% endblock content %}
+</body>
+</html>

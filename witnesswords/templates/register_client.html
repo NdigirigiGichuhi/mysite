@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}WitnessWords Transcription{% endblock title %}
+
+{% block content %}
+<div class="client-form">
+    <form action="{% url 'create_client' %}" method="post">
+        {% csrf_token %}
+        {{ form.email }}
+        {{ form.email.errors }}<br/>
+
+        {{ form.username }}
+        {{ form.username.errors }}<br/>
+
+        {{ form.password1 }}
+        {{ form.password1.errors }}<br/>
+
+        {{ form.password2 }}
+        {{ form.password2.errors }}<br/>
+
+        <button type="submit" class="register">Register</button>
+    </form>
+</div>
+{% endblock content %}

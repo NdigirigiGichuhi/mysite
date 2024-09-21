@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}WitnessWords Transcription{% endblock title %}
+
+{% block content %}
+    <div class="row-1">
+        <div class="col-1">
+            <h1>Transcribing Justice, <br/> One Word at a Time<h1>
+            <p>WitnessWords, you gain a partner who values both speed and meticulous attention to detail, ensuring that every document is not just a transcript, but a testament to the truth. Experience the clarity and precision your legal practice deserves."</p>
+            <div class="call-to-action">
+                <a href="{% url 'create_client' %}"><button class="order">Order Now</button></a> 
+            </div>    
+        </div>
+        <div class="col-2">
+            <img src="{% static 'assets/img/witnesswords2.jpg' %}" alt="" class="landing-photo">
+        </div>
+        
+    </div>
+    
+
+    
+{% endblock content %}

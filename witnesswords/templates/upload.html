@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="navbar-dash">
+        <div class="logo">
+            <a href="{% url 'dashboard' %}"><h1>WitnessWords</h1></a> 
+        </div>
+
+        <div class="profile">
+            <p>Support</p>
+            <a href="{% url 'profile' %}">
+                <p>Profile</p>
+            </a>
+            <a href="{% url 'logout_client' %}"><button class="logout">Logout</button></a>
+        </div>
+
+
+    </header>
+
+
+    <div class="client-form">
+        <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>{{ form.file.label }}</p>
+            <p>{{ form.file }}</p>
+            <p>{{ form.file.errors }}</p>
+
+            <p>{{ form.turnaround.label }}</p>
+            <p>{{ form.turnaround }}</p>
+            <p>{{ form.turnaround.errors }}</p><br>
+
+            <p>{{ form.rush.label }} {{ form.rush }}</p>
+            <p>{{ form.rush.errors }}</p> <br>
+
+            <p>{{ form.verbatim.label }} {{ form.verbatim }}</p>
+            <p>{{ form.verbatim.errors }}</p> <br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

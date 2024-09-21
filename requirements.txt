@@ -1,0 +1,9 @@
+asgiref==3.8.1
+Django==5.1.1
+django-allauth==64.2.1
+mutagen==1.47.0
+numpy==2.1.1
+opencv-python==4.10.0.84
+pydub==0.25.1
+sqlparse==0.5.1
+typing_extensions==4.12.2
